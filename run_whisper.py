@@ -9,8 +9,9 @@ from prompts import asr_context
 size, cond = sys.argv[1], sys.argv[2]
 beams = int(sys.argv[3]) if len(sys.argv) > 3 else 1
 threads = int(sys.argv[4]) if len(sys.argv) > 4 else 6
+subset_n = int(sys.argv[5]) if len(sys.argv) > 5 else 0
 torch.set_num_threads(threads)
-name = f"whisper-{size}_{cond}" + (f"_beam{beams}" if beams > 1 else "")
+name = f"whisper-{size}_{cond}" + (f"_beam{beams}" if beams > 1 else "") + (f"_n{subset_n}" if subset_n else "")
 out = os.path.join(RUNS, name + '.jsonl')
 done = {r['uid'] for r in read_jsonl(out)}
 proc = WhisperProcessor.from_pretrained('openai/whisper-' + size)
@@ -20,12 +21,17 @@ meta = {'run': name, 'model': 'openai/whisper-' + size, 'condition': cond, 'beam
         'started': time.strftime('%Y-%m-%dT%H:%M:%S%z')}
 json.dump(meta, open(os.path.join(RUNS, name + '.meta.json'), 'w'), indent=1)
 rows = load_rows()
+if subset_n:
+    keep = set(json.load(open(os.path.join(RUNS, 'subsets.json')))['subset1000'][:subset_n])  # nested: first n of the seeded permutation
+    rows = [r for r in rows if r['uid'] in keep]
 for r in rows:
     if r['uid'] in done:
         continue
     x, sr = wav_array(r['audio']['bytes'])
     feats = proc(x, sampling_rate=sr, return_tensors='pt').input_features
     kw = dict(language='en', task='transcribe', num_beams=beams, do_sample=False)
+    if beams > 1:
+        kw['max_new_tokens'] = 96  # safeguard against repetition loops in beam search (beam runs only)
     if cond == 'R1':
         kw['prompt_ids'] = torch.tensor(proc.get_prompt_ids(asr_context(r['text'])))
     t0 = time.perf_counter()
@@ -38,3 +44,7 @@ for r in rows:
     jsonl_append(out, {'uid': r['uid'], 'ref': r['text'], 'hyp': txt.strip(), 'sec': round(el, 4),
                        'dur': round(len(x) / sr, 4)})
 print('done', name)
+
+
+
+

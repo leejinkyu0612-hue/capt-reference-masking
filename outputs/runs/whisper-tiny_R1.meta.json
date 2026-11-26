@@ -1,0 +1,11 @@
+{
+ "run": "whisper-tiny_R1",
+ "model": "openai/whisper-tiny",
+ "condition": "R1",
+ "beams": 1,
+ "threads": 4,
+ "torch": "2.15.0+cpu",
+ "transformers": "5.24.0",
+ "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+ "started": "2026-11-27T00:35:45+0900"
+}

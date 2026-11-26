@@ -79,8 +79,9 @@ def call(r):
 
 todo = [r for r in rows if r['uid'] not in done]
 ok = 0
-with ThreadPoolExecutor(max_workers=8) as ex:
+with ThreadPoolExecutor(max_workers=3) as ex:
     for f in as_completed([ex.submit(call, r) for r in todo]):
         ok += bool(f.result())
 print('done', name, 'ok', ok, 'of', len(todo))
+
 

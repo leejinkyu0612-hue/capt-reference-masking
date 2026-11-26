@@ -1,0 +1,11 @@
+{
+ "run": "whisper-base_R0_beam5_n500",
+ "model": "openai/whisper-base",
+ "condition": "R0",
+ "beams": 5,
+ "threads": 6,
+ "torch": "2.15.0+cpu",
+ "transformers": "5.24.0",
+ "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+ "started": "2026-11-27T05:02:13+0900"
+}
