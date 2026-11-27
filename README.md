@@ -45,7 +45,7 @@ API runs need `OPENROUTER_API_KEY` in the environment (not stored here).
 - One gemini R0V0 request failed (999 paired utterances).
 
 ## Disclosure
-Author: Jinkyu Lee, HappyAI (founder and CEO). No HappyAI product is evaluated. ChatGPT and Claude were used for language editing and review support of the manuscript; all numbers come from the logged outputs in this repository.
+Authors: Jinkyu Lee and Chang Soo Sung (corresponding author), Department of Technology Entrepreneurship, Graduate School, Dongguk University, Seoul, Republic of Korea. Jinkyu Lee is the founder and CEO of HappyAI; no HappyAI product is evaluated. ChatGPT and Claude were used for language editing and review support of the manuscript; all numbers come from the logged outputs in this repository.
 
 ## License
 Code: MIT. Derived transcripts and results: CC BY 4.0 (same as speechocean762).
