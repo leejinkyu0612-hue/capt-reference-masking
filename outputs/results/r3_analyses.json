@@ -1,0 +1,257 @@
+{
+ "speaker": [
+  {
+   "system": "Whisper tiny",
+   "n_speakers": 84,
+   "share_positive": 0.8214285714285714,
+   "share_negative": 0.0,
+   "loo_min": 0.47631935047361296,
+   "loo_max": 0.5063291139240506,
+   "dFAR": 0.4865900383141762
+  },
+  {
+   "system": "Whisper base",
+   "n_speakers": 84,
+   "share_positive": 0.8333333333333334,
+   "share_negative": 0.0,
+   "loo_min": 0.5065616797900262,
+   "loo_max": 0.5357142857142857,
+   "dFAR": 0.5134099616858238
+  },
+  {
+   "system": "Whisper small",
+   "n_speakers": 84,
+   "share_positive": 0.8214285714285714,
+   "share_negative": 0.0,
+   "loo_min": 0.4885290148448043,
+   "loo_max": 0.5189873417721519,
+   "dFAR": 0.5006385696040869
+  },
+  {
+   "system": "gpt-4o-mini-transcribe",
+   "n_speakers": 41,
+   "share_positive": 0.3170731707317073,
+   "share_negative": 0.024390243902439025,
+   "loo_min": 0.19444444444444442,
+   "loo_max": 0.29113924050632917,
+   "dFAR": 0.25842696629213485
+  },
+  {
+   "system": "gemini-2.5-flash",
+   "n_speakers": 57,
+   "share_positive": 0.8245614035087719,
+   "share_negative": 0.0,
+   "loo_min": 0.7173913043478262,
+   "loo_max": 0.7317073170731707,
+   "dFAR": 0.7239057239057238
+  },
+  {
+   "system": "gpt-audio-mini",
+   "n_speakers": 57,
+   "share_positive": 0.7368421052631579,
+   "share_negative": 0.0,
+   "loo_min": 0.7137809187279152,
+   "loo_max": 0.7453183520599251,
+   "dFAR": 0.7290969899665553
+  }
+ ],
+ "severity": [
+  {
+   "system": "Whisper tiny",
+   "acc0_3": {
+    "n": 642,
+    "FAR_R0": 0.06230529595015576,
+    "FAR_R1": 0.5155763239875389
+   },
+   "acc4_6": {
+    "n": 141,
+    "FAR_R0": 0.15602836879432624,
+    "FAR_R1": 0.7943262411347518
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  },
+  {
+   "system": "Whisper base",
+   "acc0_3": {
+    "n": 642,
+    "FAR_R0": 0.0794392523364486,
+    "FAR_R1": 0.5529595015576324
+   },
+   "acc4_6": {
+    "n": 141,
+    "FAR_R0": 0.1773049645390071,
+    "FAR_R1": 0.8723404255319149
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  },
+  {
+   "system": "Whisper small",
+   "acc0_3": {
+    "n": 642,
+    "FAR_R0": 0.12461059190031153,
+    "FAR_R1": 0.6121495327102804
+   },
+   "acc4_6": {
+    "n": 141,
+    "FAR_R0": 0.3617021276595745,
+    "FAR_R1": 0.9219858156028369
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  },
+  {
+   "system": "gpt-4o-mini-transcribe",
+   "acc0_3": {
+    "n": 64,
+    "FAR_R0": 0.125,
+    "FAR_R1": 0.359375
+   },
+   "acc4_6": {
+    "n": 25,
+    "FAR_R0": 0.56,
+    "FAR_R1": 0.88
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  },
+  {
+   "system": "gemini-2.5-flash",
+   "acc0_3": {
+    "n": 241,
+    "FAR_R0": 0.13692946058091288,
+    "FAR_R1": 0.9045643153526971
+   },
+   "acc4_6": {
+    "n": 56,
+    "FAR_R0": 0.39285714285714285,
+    "FAR_R1": 0.9285714285714286
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  },
+  {
+   "system": "gpt-audio-mini",
+   "acc0_3": {
+    "n": 243,
+    "FAR_R0": 0.13580246913580246,
+    "FAR_R1": 0.9218106995884774
+   },
+   "acc4_6": {
+    "n": 56,
+    "FAR_R0": 0.48214285714285715,
+    "FAR_R1": 0.9642857142857143
+   },
+   "acc7plus": {
+    "n": 0,
+    "FAR_R0": null,
+    "FAR_R1": null
+   }
+  }
+ ],
+ "sentence": {
+  "Whisper tiny": {
+   "n_sentences_with_errors": 442,
+   "dFAR": 0.4865900383141762,
+   "CI_sentence_cluster": [
+    0.4396424495805657,
+    0.533672337399846
+   ]
+  },
+  "Whisper base": {
+   "n_sentences_with_errors": 442,
+   "dFAR": 0.5134099616858238,
+   "CI_sentence_cluster": [
+    0.4663210724088131,
+    0.5605493133583022
+   ]
+  },
+  "Whisper small": {
+   "n_sentences_with_errors": 442,
+   "dFAR": 0.5006385696040869,
+   "CI_sentence_cluster": [
+    0.4570351154288235,
+    0.5442181430212836
+   ]
+  },
+  "gpt-4o-mini-transcribe": {
+   "n_sentences_with_errors": 69,
+   "dFAR": 0.25842696629213485,
+   "CI_sentence_cluster": [
+    0.13636363636363635,
+    0.3958333333333333
+   ]
+  },
+  "gemini-2.5-flash": {
+   "n_sentences_with_errors": 173,
+   "dFAR": 0.7239057239057238,
+   "CI_sentence_cluster": [
+    0.6618168449197861,
+    0.7829918939855032
+   ]
+  },
+  "gpt-audio-mini": {
+   "n_sentences_with_errors": 174,
+   "dFAR": 0.7290969899665553,
+   "CI_sentence_cluster": [
+    0.6597938144329897,
+    0.7919463087248322
+   ]
+  }
+ },
+ "bag_of_words": [
+  {
+   "system": "Whisper tiny",
+   "FAR_R0": 0.09067688378033206,
+   "FAR_R1": 0.5810983397190294,
+   "dFAR": 0.4904214559386973
+  },
+  {
+   "system": "Whisper base",
+   "FAR_R0": 0.1111111111111111,
+   "FAR_R1": 0.6206896551724138,
+   "dFAR": 0.5095785440613028
+  },
+  {
+   "system": "Whisper small",
+   "FAR_R0": 0.17752234993614305,
+   "FAR_R1": 0.6756066411238825,
+   "dFAR": 0.49808429118773945
+  },
+  {
+   "system": "gpt-4o-mini-transcribe",
+   "FAR_R0": 0.25842696629213485,
+   "FAR_R1": 0.5168539325842697,
+   "dFAR": 0.25842696629213485
+  },
+  {
+   "system": "gemini-2.5-flash",
+   "FAR_R0": 0.19865319865319866,
+   "FAR_R1": 0.9090909090909091,
+   "dFAR": 0.7104377104377104
+  },
+  {
+   "system": "gpt-audio-mini",
+   "FAR_R0": 0.21070234113712374,
+   "FAR_R1": 0.9297658862876255,
+   "dFAR": 0.7190635451505017
+  }
+ ],
+ "n_distinct_sentences_test": 2499
+}
