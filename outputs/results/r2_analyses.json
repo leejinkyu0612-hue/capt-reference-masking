@@ -1,0 +1,831 @@
+{
+ "control": {
+  "C": {
+   "n_utts": 300,
+   "target_word_acceptance": 0.15720978656949505,
+   "exact_target_output": 0.09333333333333334,
+   "FAR": 0.1518987341772152,
+   "FRR": 0.8398169336384439,
+   "n_pos": 79
+  },
+  "D": {
+   "n_utts": 300,
+   "target_word_acceptance": 0.03956272774596564,
+   "exact_target_output": 0.01,
+   "FAR": 0.012658227848101266,
+   "FRR": 0.9570938215102975,
+   "n_pos": 79
+  },
+  "E": {
+   "n_utts": 300,
+   "target_word_acceptance": 0.7204580947423217,
+   "exact_target_output": 0.32666666666666666,
+   "FAR": 0.06329113924050633,
+   "FRR": 0.2305491990846682,
+   "n_pos": 79
+  },
+  "A_real_R0": {
+   "target_word_acceptance": 0.7131702238417491,
+   "FAR": 0.02531645569620253,
+   "FRR": 0.23741418764302058,
+   "n_pos": 79,
+   "exact_target_output": 0.30333333333333334
+  },
+  "B_real_R1": {
+   "target_word_acceptance": 0.9521082769390942,
+   "FAR": 0.5316455696202531,
+   "FRR": 0.02517162471395884,
+   "n_pos": 79,
+   "exact_target_output": 0.8433333333333334
+  }
+ },
+ "transcribe_missing": {
+  "n_pos_with_R0": 298,
+  "n_pos_missing_R1": 209,
+  "FAR_R0_included": 0.24719101123595505,
+  "FAR_R0_missing": 0.15311004784688995,
+  "dFAR_bound_low": -0.03020134228187918,
+  "dFAR_bound_high": 0.6711409395973155,
+  "FRR_R0_included": 0.17504222972972971,
+  "FRR_R0_missing": 0.19461697722567284
+ },
+ "four_condition_valid": {
+  "gemini-2.5-flash": {
+   "excluded_utts": 5,
+   "n_pos": 296,
+   "FAR": {
+    "R0V0": 0.1858108108108108,
+    "R1V0": 0.9087837837837838,
+    "R0V1": 0.15878378378378377,
+    "R1V1": 0.6722972972972973
+   },
+   "FRR": {
+    "R0V0": 0.1581395348837209,
+    "R1V0": 0.01136950904392764,
+    "R0V1": 0.15021533161068046,
+    "R1V1": 0.008268733850129162
+   },
+   "R_effect_V0": 0.722972972972973,
+   "V_effect_R0": -0.02702702702702703,
+   "DiD": -0.20945945945945954,
+   "coverage": {
+    "R0V0": 0.995,
+    "R1V0": 0.998,
+    "R0V1": 0.996,
+    "R1V1": 0.998
+   }
+  },
+  "gpt-audio-mini": {
+   "excluded_utts": 199,
+   "n_pos": 213,
+   "FAR": {
+    "R0V0": 0.26291079812206575,
+    "R1V0": 0.9107981220657277,
+    "R0V1": 0.09859154929577464,
+    "R1V1": 0.4225352112676056
+   },
+   "FRR": {
+    "R0V0": 0.1214741610047354,
+    "R1V0": 0.01029442042413009,
+    "R0V1": 0.13156269302038293,
+    "R1V1": 0.03850113238624664
+   },
+   "R_effect_V0": 0.647887323943662,
+   "V_effect_R0": -0.16431924882629112,
+   "DiD": -0.323943661971831,
+   "coverage": {
+    "R0V0": 0.8009999999999999,
+    "R1V0": 0.998,
+    "R0V1": 0.991,
+    "R1V1": 0.998
+   }
+  }
+ },
+ "refusal_audit": {
+  "n_matched": 225,
+  "n_ref_contains_match": 16,
+  "n_not_refusal_like": 25,
+  "examples_not_refusal_like": [
+   {
+    "run": "gemini-2.5-flash_R0V0",
+    "uid": "001330172",
+    "ref_contains_match": true,
+    "looks_like_refusal": false,
+    "hyp": "I can't believe that."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V0",
+    "uid": "001330129",
+    "ref_contains_match": false,
+    "looks_like_refusal": false,
+    "hyp": "I can't smile the soup."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V0",
+    "uid": "003060337",
+    "ref_contains_match": false,
+    "looks_like_refusal": false,
+    "hyp": "He can't hardly do that himself without effort."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V0",
+    "uid": "010750003",
+    "ref_contains_match": false,
+    "looks_like_refusal": false,
+    "hyp": "Tim can't do the job."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V0",
+    "uid": "080680108",
+    "ref_contains_match": true,
+    "looks_like_refusal": false,
+    "hyp": "Why cannot she like an honest man who likes her?"
+   },
+   {
+    "run": "gemini-2.5-flash_R1V0",
+    "uid": "001330172",
+    "ref_contains_match": true,
+    "looks_like_refusal": false,
+    "hyp": "I can't believe that."
+   },
+   {
+    "run": "gemini-2.5-flash_R1V0",
+    "uid": "080680108",
+    "ref_contains_match": true,
+    "looks_like_refusal": false,
+    "hyp": "Why cannot she like an honest man who likes her?"
+   },
+   {
+    "run": "gemini-2.5-flash_R0V1",
+    "uid": "001330129",
+    "ref_contains_match": false,
+    "looks_like_refusal": false,
+    "hyp": "I can't smile the soap."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V1",
+    "uid": "001330172",
+    "ref_contains_match": true,
+    "looks_like_refusal": false,
+    "hyp": "I can't believe that."
+   },
+   {
+    "run": "gemini-2.5-flash_R0V1",
+    "uid": "010750003",
+    "ref_contains_match": false,
+    "looks_like_refusal": false,
+    "hyp": "Tim can't do the work."
+   }
+  ]
+ },
+ "labels": {
+  "mispron_and_acc10": 0,
+  "mispron_total": 783,
+  "acc10_total": 14319,
+  "excluded_middle": 865
+ },
+ "frr_all_nonpositive": {
+  "Whisper tiny": {
+   "FRR_R0": 0.31961275026343516,
+   "FRR_R1": 0.050381981032666,
+   "n": 15184
+  },
+  "Whisper base": {
+   "FRR_R0": 0.26468651211801897,
+   "FRR_R1": 0.031414646996838824,
+   "n": 15184
+  },
+  "Whisper small": {
+   "FRR_R0": 0.18499736564805058,
+   "FRR_R1": 0.018308746048472102,
+   "n": 15184
+  },
+  "gemini-2.5-flash": {
+   "FRR_R0": 0.18066818034382093,
+   "FRR_R1": 0.012325656827765208,
+   "n": 6166
+  },
+  "gpt-audio-mini": {
+   "FRR_R0": 0.25044577727346407,
+   "FRR_R1": 0.012319662830280409,
+   "n": 6169
+  }
+ },
+ "examples_whisper_small": [
+  {
+   "uid": "000440035",
+   "word": "THREE",
+   "mispron": [
+    {
+     "canonical-phone": "TH",
+     "index": 0,
+     "pronounced-phone": "S"
+    }
+   ],
+   "ref": "THREE SIX FOUR SIX",
+   "R0": "See, 6 for 6.",
+   "R1": "Three six four six."
+  },
+  {
+   "uid": "000440104",
+   "word": "LISA",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 0,
+     "pronounced-phone": "D"
+    }
+   ],
+   "ref": "LISA LAYLA GOT THE BOOTS",
+   "R0": "These are the God's love books.",
+   "R1": "Lisa layla got the boots."
+  },
+  {
+   "uid": "000440147",
+   "word": "CAIRO",
+   "mispron": [
+    {
+     "canonical-phone": "IH",
+     "index": 2,
+     "pronounced-phone": "EH R"
+    },
+    {
+     "canonical-phone": "AH",
+     "index": 3,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "LILLY LIVES IN CAIRO NOW",
+   "R0": "Lily, do you see K-O-R-O-N-A?",
+   "R1": "Lilly lives in cairo now."
+  },
+  {
+   "uid": "000490097",
+   "word": "SANDY",
+   "mispron": [
+    {
+     "canonical-phone": "D",
+     "index": 3,
+     "pronounced-phone": "L"
+    }
+   ],
+   "ref": "SANDY LIKES THE OLD MAP",
+   "R0": "Seline likes the old map.",
+   "R1": "Sandy likes the old map."
+  },
+  {
+   "uid": "000920002",
+   "word": "BILL",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 2,
+     "pronounced-phone": "AH"
+    }
+   ],
+   "ref": "BILL LIKES YELLOW",
+   "R0": "Peer likes yellow.",
+   "R1": "Bill likes yellow."
+  },
+  {
+   "uid": "000960008",
+   "word": "GRAPE",
+   "mispron": [
+    {
+     "canonical-phone": "EY",
+     "index": 2,
+     "pronounced-phone": "AE"
+    }
+   ],
+   "ref": "MIKE HAS GOT THE GRAPE",
+   "R0": "Mac has got the grapple.",
+   "R1": "Mike has got the grape."
+  },
+  {
+   "uid": "001120024",
+   "word": "LISA",
+   "mispron": [
+    {
+     "canonical-phone": "AH",
+     "index": 3,
+     "pronounced-phone": "AH*"
+    }
+   ],
+   "ref": "LISA LOVES AUSTRALIAN",
+   "R0": "You say I'm such a cheat.",
+   "R1": "Lisa loves australian."
+  },
+  {
+   "uid": "001120024",
+   "word": "LOVES",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 0,
+     "pronounced-phone": "Y"
+    }
+   ],
+   "ref": "LISA LOVES AUSTRALIAN",
+   "R0": "You say I'm such a cheat.",
+   "R1": "Lisa loves australian."
+  },
+  {
+   "uid": "001120063",
+   "word": "HOLIDAY",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 2,
+     "pronounced-phone": "<DEL>"
+    }
+   ],
+   "ref": "TURKEYS HOLIDAY JAZZ",
+   "R0": "Turkey's hide the jacks.",
+   "R1": "Turkeys holiday jazz."
+  },
+  {
+   "uid": "001120097",
+   "word": "JAYME",
+   "mispron": [
+    {
+     "canonical-phone": "JH",
+     "index": 0,
+     "pronounced-phone": "<unk>"
+    },
+    {
+     "canonical-phone": "M",
+     "index": 2,
+     "pronounced-phone": "<unk>"
+    },
+    {
+     "canonical-phone": "IY",
+     "index": 3,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "JAYME LIKES THE OLD GLOVES",
+   "R0": "Hey, do you like the old gloves?",
+   "R1": "Jayme likes the old gloves."
+  },
+  {
+   "uid": "001120101",
+   "word": "JEANS",
+   "mispron": [
+    {
+     "canonical-phone": "IY",
+     "index": 1,
+     "pronounced-phone": "EH"
+    }
+   ],
+   "ref": "LOOK AT TOM'S JEANS",
+   "R0": "You kids come stress.",
+   "R1": "Look at tom's jeans."
+  },
+  {
+   "uid": "001120119",
+   "word": "LIVING",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 0,
+     "pronounced-phone": "<DEL>"
+    }
+   ],
+   "ref": "SO ALICE WENT INTO THE LIVING ROOM",
+   "R0": "So I just went into the evening room.",
+   "R1": "So alice went into the living room."
+  },
+  {
+   "uid": "001120130",
+   "word": "LOVES",
+   "mispron": [
+    {
+     "canonical-phone": "L",
+     "index": 0,
+     "pronounced-phone": "Y"
+    }
+   ],
+   "ref": "ANDY LOVES PEA",
+   "R0": "and the F's P.",
+   "R1": "Andy loves pea."
+  },
+  {
+   "uid": "001120148",
+   "word": "CANBERRA",
+   "mispron": [
+    {
+     "canonical-phone": "EH",
+     "index": 4,
+     "pronounced-phone": "AH"
+    },
+    {
+     "canonical-phone": "R",
+     "index": 5,
+     "pronounced-phone": "R*"
+    }
+   ],
+   "ref": "MANDY LIVED IN CANBERRA",
+   "R0": "Many of you can buy rock.",
+   "R1": "Mandy lived in canberra."
+  },
+  {
+   "uid": "001140108",
+   "word": "JEEP",
+   "mispron": [
+    {
+     "canonical-phone": "P",
+     "index": 2,
+     "pronounced-phone": "<DEL>"
+    }
+   ],
+   "ref": "LOOK AT THIS BIG JEEP",
+   "R0": "Look at this big G.",
+   "R1": "Look at this big jeep."
+  },
+  {
+   "uid": "001220013",
+   "word": "WOLF",
+   "mispron": [
+    {
+     "canonical-phone": "UH",
+     "index": 1,
+     "pronounced-phone": "AA"
+    }
+   ],
+   "ref": "LOOK AT THE WOLF",
+   "R0": "Look at her, wow.",
+   "R1": "Look at the wolf."
+  },
+  {
+   "uid": "001220037",
+   "word": "ZERO",
+   "mispron": [
+    {
+     "canonical-phone": "ER",
+     "index": 2,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "FOUR FOUR ZERO",
+   "R0": "for for you",
+   "R1": "Four four zero."
+  },
+  {
+   "uid": "001330075",
+   "word": "CLOUD",
+   "mispron": [
+    {
+     "canonical-phone": "AW",
+     "index": 2,
+     "pronounced-phone": "OW"
+    },
+    {
+     "canonical-phone": "D",
+     "index": 3,
+     "pronounced-phone": "<DEL>"
+    }
+   ],
+   "ref": "PETER LIKES YOUR RED CLOUD",
+   "R0": "Peter likes your red clothes.",
+   "R1": "Peter likes your red cloud."
+  },
+  {
+   "uid": "001330143",
+   "word": "REVENGE",
+   "mispron": [
+    {
+     "canonical-phone": "IH",
+     "index": 1,
+     "pronounced-phone": "EH"
+    },
+    {
+     "canonical-phone": "EH",
+     "index": 3,
+     "pronounced-phone": "ER"
+    },
+    {
+     "canonical-phone": "N",
+     "index": 4,
+     "pronounced-phone": "<DEL>"
+    }
+   ],
+   "ref": "I WILL HAVE MY REVENGE",
+   "R0": "I will have my ravage.",
+   "R1": "I will have my revenge."
+  },
+  {
+   "uid": "001490161",
+   "word": "CHEESE",
+   "mispron": [
+    {
+     "canonical-phone": "IY",
+     "index": 1,
+     "pronounced-phone": "IH R"
+    },
+    {
+     "canonical-phone": "Z",
+     "index": 2,
+     "pronounced-phone": "S"
+    }
+   ],
+   "ref": "HERE IS YOUR CHEESE",
+   "R0": "Here is your cheers.",
+   "R1": "Here is your cheese."
+  },
+  {
+   "uid": "003060017",
+   "word": "UNITED",
+   "mispron": [
+    {
+     "canonical-phone": "AY",
+     "index": 3,
+     "pronounced-phone": "IH"
+    }
+   ],
+   "ref": "SO MUCH FOR A UNITED FRONT",
+   "R0": "So much for you, Lity, from...",
+   "R1": "So much for a united front."
+  },
+  {
+   "uid": "003060017",
+   "word": "FRONT",
+   "mispron": [
+    {
+     "canonical-phone": "T",
+     "index": 4,
+     "pronounced-phone": "M"
+    }
+   ],
+   "ref": "SO MUCH FOR A UNITED FRONT",
+   "R0": "So much for you, Lity, from...",
+   "R1": "So much for a united front."
+  },
+  {
+   "uid": "003060025",
+   "word": "STREETS",
+   "mispron": [
+    {
+     "canonical-phone": "IY",
+     "index": 3,
+     "pronounced-phone": "EH"
+    }
+   ],
+   "ref": "BUT THE STREETS WERE RELATIVELY CALM SATURDAY MORNING",
+   "R0": "But the stress were relatively calm Saturday morning.",
+   "R1": "But the streets were relatively calm saturday morning."
+  },
+  {
+   "uid": "003060107",
+   "word": "BALL",
+   "mispron": [
+    {
+     "canonical-phone": "AO",
+     "index": 1,
+     "pronounced-phone": "EH"
+    }
+   ],
+   "ref": "THE BALL IS IN THEIR COURT NOW",
+   "R0": "The bell is in their control hall.",
+   "R1": "The ball is in their court now."
+  },
+  {
+   "uid": "003060107",
+   "word": "COURT",
+   "mispron": [
+    {
+     "canonical-phone": "AO",
+     "index": 1,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "THE BALL IS IN THEIR COURT NOW",
+   "R0": "The bell is in their control hall.",
+   "R1": "The ball is in their court now."
+  },
+  {
+   "uid": "003060161",
+   "word": "WOULD",
+   "mispron": [
+    {
+     "canonical-phone": "W",
+     "index": 0,
+     "pronounced-phone": "HH"
+    }
+   ],
+   "ref": "WHAT WHAT WOULD HAVE YOU HAPPEN",
+   "R0": "Water, water, water, how will happen?",
+   "R1": "What what what would have happen."
+  },
+  {
+   "uid": "003060259",
+   "word": "ROAD",
+   "mispron": [
+    {
+     "canonical-phone": "R",
+     "index": 0,
+     "pronounced-phone": "L"
+    }
+   ],
+   "ref": "END OF THE ROAD FOR SOME PLAYERS",
+   "R0": "And I'll download for some players.",
+   "R1": "End of the road for some players."
+  },
+  {
+   "uid": "003060263",
+   "word": "FALL",
+   "mispron": [
+    {
+     "canonical-phone": "AO",
+     "index": 1,
+     "pronounced-phone": "EH"
+    }
+   ],
+   "ref": "THEY FALL IN LOVE WITH MY PERSONALITY NOT ME",
+   "R0": "They fell in love with my personality, let me",
+   "R1": "They fall in love with my personality not me."
+  },
+  {
+   "uid": "003060306",
+   "word": "HEART",
+   "mispron": [
+    {
+     "canonical-phone": "AA",
+     "index": 1,
+     "pronounced-phone": "IH R"
+    }
+   ],
+   "ref": "IT WAS NOT MY HEART THAT HE WAS AFTER",
+   "R0": "It was not my help that he was after.",
+   "R1": "It was not my heart that he was after."
+  },
+  {
+   "uid": "004570129",
+   "word": "OVEN",
+   "mispron": [
+    {
+     "canonical-phone": "AH",
+     "index": 0,
+     "pronounced-phone": "OW"
+    }
+   ],
+   "ref": "OR WHEN YOU OPEN THE OVEN",
+   "R0": "Open your opener over it.",
+   "R1": "Or when you open the oven."
+  },
+  {
+   "uid": "004570146",
+   "word": "CREATE",
+   "mispron": [
+    {
+     "canonical-phone": "K",
+     "index": 0,
+     "pronounced-phone": "G"
+    },
+    {
+     "canonical-phone": "EY",
+     "index": 3,
+     "pronounced-phone": "EY*"
+    }
+   ],
+   "ref": "CREATE TO BE HAPPY AND GOOD",
+   "R0": "Ready to be happy and good.",
+   "R1": "Create to be happy and good."
+  },
+  {
+   "uid": "004570237",
+   "word": "THAT",
+   "mispron": [
+    {
+     "canonical-phone": "DH",
+     "index": 0,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "ACTUALLY I'M LOOKING FORWARD TO THAT MYSELF",
+   "R0": "Actually, I'm looking forward to it myself.",
+   "R1": "Actually i'm looking forward to that myself."
+  },
+  {
+   "uid": "004570256",
+   "word": "MONTH",
+   "mispron": [
+    {
+     "canonical-phone": "AH",
+     "index": 1,
+     "pronounced-phone": "AO"
+    }
+   ],
+   "ref": "WHAT IS THE BEST MONTH OF THE YEAR",
+   "R0": "What is the best most of the year?",
+   "R1": "What is the best month of the year."
+  },
+  {
+   "uid": "004610037",
+   "word": "THAT'S",
+   "mispron": [
+    {
+     "canonical-phone": "DH",
+     "index": 0,
+     "pronounced-phone": "S"
+    }
+   ],
+   "ref": "BUT THAT'S ANOTHER STORY ALTOGETHER",
+   "R0": "but it says another story altogether",
+   "R1": "But that's another story altogether."
+  },
+  {
+   "uid": "004610065",
+   "word": "THOUGH",
+   "mispron": [
+    {
+     "canonical-phone": "DH",
+     "index": 0,
+     "pronounced-phone": "S"
+    }
+   ],
+   "ref": "NATIONALLY THOUGH THE TREND IS BEGINNING TO TURN UPWARD AGAIN",
+   "R0": "Nationally, so the trend is beginning to turn upward again.",
+   "R1": "Nationally though the trend is beginning to turn upward again."
+  },
+  {
+   "uid": "004610129",
+   "word": "WORRY",
+   "mispron": [
+    {
+     "canonical-phone": "W",
+     "index": 0,
+     "pronounced-phone": "B"
+    }
+   ],
+   "ref": "WORRY IS PART OF LIFE",
+   "R0": "Very yes, part of life.",
+   "R1": "Worry is part of life."
+  },
+  {
+   "uid": "004610266",
+   "word": "CHEERS",
+   "mispron": [
+    {
+     "canonical-phone": "IH",
+     "index": 1,
+     "pronounced-phone": "EH"
+    },
+    {
+     "canonical-phone": "AH",
+     "index": 2,
+     "pronounced-phone": "AH*"
+    }
+   ],
+   "ref": "CHEERS TO A GREAT GROUP",
+   "R0": "Just to a great group.",
+   "R1": "Cheers to a great group."
+  },
+  {
+   "uid": "004610373",
+   "word": "THERE",
+   "mispron": [
+    {
+     "canonical-phone": "DH",
+     "index": 0,
+     "pronounced-phone": "TH"
+    }
+   ],
+   "ref": "IT WAS DIFFICULT TO GET THERE",
+   "R0": "It was difficult to get a sale.",
+   "R1": "It was difficult to get there."
+  },
+  {
+   "uid": "005630160",
+   "word": "GOOD",
+   "mispron": [
+    {
+     "canonical-phone": "UH",
+     "index": 1,
+     "pronounced-phone": "OW"
+    }
+   ],
+   "ref": "BUT FOR A GOOD CAUSE",
+   "R0": "But therefore, I go to cars.",
+   "R1": "But for a good cause."
+  },
+  {
+   "uid": "005670356",
+   "word": "SURGEON",
+   "mispron": [
+    {
+     "canonical-phone": "ER",
+     "index": 1,
+     "pronounced-phone": "UH"
+    },
+    {
+     "canonical-phone": "JH",
+     "index": 2,
+     "pronounced-phone": "<unk>"
+    }
+   ],
+   "ref": "A SURGEON WAS AT WORK AMONG THE SUFFERERS",
+   "R0": "Oh, Su-Kin was at work. Your Monzy suffers.",
+   "R1": "A surgeon was at work among the sufferers."
+  }
+ ]
+}
